@@ -25,14 +25,14 @@ document.querySelector("#connection").addEventListener("click", function()  {
         email: document.querySelector("#connectionEmail").value,
         password: document.querySelector("#connectionPassword").value,
     }
-    fetch("weatherapp-backend-jade.vercel.app/users/signin", {
+    fetch("weatherapp-backend-jade.vercel.app/users/signin",{
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify(user),
     })
     .then(response => response.json())
-    .then(data => {
-        if(data.result){ response => response.json(true);
+    .then(data =>{
+        if(data.result){ 
             window.location.assign("index.html");
         }
         })
